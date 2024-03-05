@@ -1,9 +1,9 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/duckdb",
-    "crates/libduckdb-sys",
-    "crates/duckdb-loadable-macros"
+  "crates/duckdb",
+  "crates/libduckdb-sys",
+  "crates/duckdb-loadable-macros",
 ]
 
 [workspace.package]
