@@ -17,7 +17,12 @@ description = "Native bindings to the libduckdb library, C API; build loadable e
 darling = "0.20.10"
 proc-macro2 = { workspace = true }
 quote = { workspace = true }
-syn = { workspace = true, features = ["extra-traits", "full", "fold", "parsing"] }
+syn = { workspace = true, features = [
+  "extra-traits",
+  "full",
+  "fold",
+  "parsing",
+] }
 
 [lib]
 proc-macro = true
