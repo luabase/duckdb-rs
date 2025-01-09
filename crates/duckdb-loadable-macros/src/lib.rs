@@ -90,7 +90,7 @@ pub fn duckdb_entrypoint_c_api(attr: TokenStream, item: TokenStream) -> TokenStr
                                 (*access).set_error.unwrap()(info, e.as_ptr());
                             },
                             Err(_e) => {
-                                let error_alloc_failure = c"An error occured but the extension failed to allocate memory for an error string";
+                                let error_alloc_failure = "An error occured but the extension failed to allocate memory for an error string";
                                 (*access).set_error.unwrap()(info, error_alloc_failure.as_ptr());
                             }
                         }

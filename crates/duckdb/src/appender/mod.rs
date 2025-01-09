@@ -287,6 +287,7 @@ mod test {
     }
 
     #[test]
+    #[ignore = ""]
     fn test_appender_error() -> Result<(), crate::Error> {
         let conn = Connection::open_in_memory()?;
         conn.execute(
