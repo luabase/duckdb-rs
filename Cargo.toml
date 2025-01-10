@@ -8,10 +8,10 @@ members = [
 
 [workspace.package]
 version = "1.1.3"
-authors = ["wangfenjin <wangfenj@gmail.com>"]
+authors = ["mharrisb1 <mharris@definite.app>"]
 edition = "2021"
-repository = "https://github.com/duckdb/duckdb-rs"
-homepage = "https://github.com/duckdb/duckdb-rs"
+repository = "https://github.com/luabase/duckdb-rs"
+homepage = "https://github.com/luabase/duckdb-rs"
 documentation = "http://docs.rs/duckdb/"
 readme = "README.md"
 keywords = ["duckdb", "database", "ffi"]
@@ -62,4 +62,9 @@ unicase = "2.6.0"
 url = "2.1"
 uuid = "1.0"
 vcpkg = "0.2"
-arrow = { version = "53", default-features = false, features = ["prettyprint", "ffi", "json", "chrono-tz"] }
+arrow = { version = "53", default-features = false, features = [
+  "prettyprint",
+  "ffi",
+  "json",
+  "chrono-tz",
+] }
