@@ -7,17 +7,17 @@
 # Usage
 # $ get_latest_release "duckdb/duckdb"
 get_latest_release() {
-    curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
-      grep '"tag_name":' |                                            # Get tag line
-      sed -E 's/.*"v([^"]+)".*/\1/'                                   # Pluck JSON value
+  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"v([^"]+)".*/\1/'                                   # Pluck JSON value
 }
 
 duckdb_version=$(get_latest_release "duckdb/duckdb")
-duckdb_rs_version=$(get_latest_release "duckdb/duckdb-rs")
+duckdb_rs_version=$(get_latest_release "luabase/duckdb-rs")
 
 if [ $duckdb_version = $duckdb_rs_version ]; then
-    echo "Already update to date, latest version is $duckdb_version"
-    exit 0
+  echo "Already update to date, latest version is $duckdb_version"
+  exit 0
 fi
 
 echo "Start to upgrade from $duckdb_rs_version to $duckdb_version"
